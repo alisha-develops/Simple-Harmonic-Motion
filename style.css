@@ -86,9 +86,6 @@ img {
     justify-content: center; 
     align-items: center; 
     position: relative;
-    /* top: 50%;
-    left: 60%; */
-    /* transform: translate(-50%, -0%); */
 }
 
 #centerpoint, 
@@ -111,6 +108,7 @@ img {
 .particlewhite { 
     background-color: white;
     transform: translateX(65px);  
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .x-axis {
@@ -132,3 +130,36 @@ img {
     border: 2px dashed paleturquoise;
     border-radius: 50%;
 }
+
+#connectgrtow {
+    position: absolute;
+    width: 2px;
+    height: 95px;
+    z-index: 5;
+    background-color: brown;
+    transform-origin: center; 
+    transform: translateX(65px) translateY(-55px);
+}
+
+#connectgrtord {
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    z-index: 5;
+    background-color: rgb(29, 12, 90);
+    transform-origin: center; 
+    transform: translateX(36px) translateY(-55px) rotate(32deg);
+}
+
+#connectrdtow {
+    position: absolute;
+    width: 59px;
+    height: 8px;
+    background-color: rgba(255, 208, 0, 0.3);
+    z-index: 1;
+    left: 50%; 
+    top: 50%;
+    transform-origin: left; 
+    transform: translateY(-50%);
+}
+
