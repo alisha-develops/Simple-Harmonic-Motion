@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+            {
+              "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+              }
+            }
+          </script>
 </head>
 <body>
     <header>
@@ -14,8 +22,16 @@
     <main>
         <p> i wanna pass physics please god.</p>
         <div class="boxofimgs">
-            <div class"shmimg">
-                <img src="images/shm-removebg-preview.png"
+            <div class="shmimg"><img src="images/shm-removebg-preview.png"/>
+                <div class="circlebg">
+                    <div class="circle">
+                    <div class="x-axis"></div>
+                    <div class="y-axis"></div>
+                    <div id="centerpoint" class="particlered"></div>
+                    <div id="diameterpoint" class="particlewhite"></div>
+                    <div id="pathpoint" class="particlegreen"></div>
+                </div>
+                </div>
             </div>        
         </div>
         <div class="the-details">
@@ -25,8 +41,13 @@
                 <li>this is supposed to be for #beest</li>
             </ul>
         </div>
+
     </main>
 
-    <footer></footer>
+    <footer>
+        
+    </footer>
+    
+    <script type="module" src="script.js"></script>
 </body>
 </html>

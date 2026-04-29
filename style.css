@@ -12,6 +12,11 @@ body {
     background-color: rgb(92, 64, 4);
     border: 2px solid palevioletred ;
     border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+    /* margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh; */
 }
 
 h1 {
@@ -27,7 +32,7 @@ p {
 }
 
 .boxofimgs {
-    height: 100vh;
+    height: auto;
     display: grid;
     place-items: center;
     border: 2px dotted yellow;
@@ -49,18 +54,81 @@ p {
 
 .shmimg {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
 }
 
 img {
     border: 5px dotted rgb(75, 42, 11);
     background-color: rgb(255, 230, 0);
+    display: block;
+    max-width:300px;
+    max-width: auto;
+
 }
 
 .the-details {
     font-family: 'Sterion';
-    color: rgb(220, 245, 230);
-    margin-top: 100px;
+    color: beige;
+    margin-top: 10px;
+}
+
+.circle{
+    border: 2px solid rgb(4, 4, 97);
+    background-color: rgb(147, 87, 182);
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    position: relative;
+    /* top: 50%;
+    left: 60%; */
+    /* transform: translate(-50%, -0%); */
+}
+
+#centerpoint, 
+#diameterpoint, 
+#pathpoint {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; 
+    position: absolute; 
+}
+
+#pathpoint {
+    position: absolute;
+    transform: rotate(32deg) translateY(-125px);  
+    background-color: green;
+}
+
+.particlered { background-color: red; }
+
+.particlewhite { 
+    background-color: white;
+    transform: translateX(65px);  
+}
+
+.x-axis {
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+}
+
+.y-axis {
+    position: absolute;
+    width: 1px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.circlebg {
+    border: 2px dashed paleturquoise;
+    border-radius: 50%;
 }
