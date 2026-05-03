@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Sterion';
-    src: url('fonts/Sterion-BLLld.ttf');
+    src: url(fonts/Sterion-BLLld.ttf);
 }
 
 @font-face {
     font-family: 'Star Jedi Hollow';
-    src: url('fonts/StarJediHollow-A4lL.ttf');
+    src: url(fonts/StarJediHollow-A4lL.ttf);
 }
 
 @font-face {
     font-family: 'Star Jedi Rounded';
-    src: url('fonts/StarJediRounded-jW3R.ttf');
+    src: url(fonts/StarJediRounded-jW3R.ttf);
 }
 
 html {

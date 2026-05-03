@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'fira';
+    src: url(fonts/FiraCode-Regular.ttf);
+}
+body {
+    background-color: rgb(92, 64, 4);
+    border: 2px solid rgb(211, 231, 30) ;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-sizing: border-box;
+}
+
+.partsgrid {
+    font-family: 'fira';
+    color: azure;
+    width: 100%;
+}
+
+.parthtm {
+    border: 2px solid pink;
+    border-radius: 15px;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+pre {
+    margin: 0;  
+    white-space: pre-wrap;
+}
