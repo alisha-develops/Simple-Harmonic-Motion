@@ -7,8 +7,7 @@ and decided the best way to remember it forever was to make something fun with i
 an interactive diagram of simple harmonic motion! the green dot moves around 
 the circle, the white dot shows its projection on the x-axis (that's the actual 
 SHM part), and all the connecting lines update in real time.
-[![Demo](<img width="1282" height="629" alt="2026-05-03 (2)" src="https://github.com/user-attachments/assets/9fde0553-13e3-41a2-b956-8ea1adb99dc4" />
-)](./demo.mp4)
+[![Demo](https://github.com/user-attachments/assets/9fde0553-13e3-41a2-b956-8ea1adb99dc4)](https://github.com/user-attachments/assets/9fde0553-13e3-41a2-b956-8ea1adb99dc4)
 no libraries. no canvas. just pure CSS and JS doing the math.
 
 ## why does this exist?
