@@ -150,17 +150,11 @@ img {
 }
 
 .particlewhite { 
-    background-color: white;
+    background-color: rgb(85, 81, 81);
     transform: translateX(65px);  
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
     animation: pulseMove 1.5s infinite ease-in-out; 
 }
-/* 
-@keyframes pulseMove {
-  0% { transform: scale(1) translateY(0); }
-  50% { transform: scale(1) translateX(60px); } 
-  100% { transform: scale(1) translateY(0); }
-} */
 
 .x-axis {
     position: absolute;
