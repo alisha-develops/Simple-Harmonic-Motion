@@ -4,7 +4,6 @@
 }
 body {
     background-color: rgb(92, 64, 4);
-    border: 2px solid rgb(211, 231, 30) ;
     margin: 0;
     padding: 20px;
     min-height: 100vh;
@@ -16,6 +15,8 @@ body {
 
 .partsgrid {
     font-family: 'fira';
+    background-color: rgb(82, 67, 95);
+    border-radius: 15px;
     color: azure;
     width: 100%;
 }
