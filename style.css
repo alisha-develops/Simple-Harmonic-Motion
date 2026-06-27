@@ -135,22 +135,6 @@ img {
     position: relative;
 }
 
-.circlecode a {
-    display: inline-block;
-    padding: 15px 35px;
-    color: burlywood;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: burlywood;
-    text-decoration-thickness: 2px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    z-index: 2;
-    position: relative;
-    border-radius: 20px;
-}
-
 #centerpoint, 
 #diameterpoint, 
 #pathpoint {
@@ -254,4 +238,106 @@ img {
 @keyframes moveDot {
   from { transform: translateX(0); }
   to { transform: translateX(200px); }
+}
+
+.othertopics h2 {
+    color: burlywood;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: burlywood;
+    text-decoration-thickness: 2px;
+    font-family: 'Sterion';
+    font-weight: bold;
+    font-size: 2rem;
+    position: relative;
+}
+
+.wave {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.wave h2 {
+    font-family: 'Sterion';
+    color: rgb(52, 189, 48);
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+#wavecanvas {
+    border: 2px dotted rgb(38, 255, 92);
+    border-radius: 20px;
+    background-color: rgb(65, 110, 56);
+    width: 100%;
+    max-width: 700px;
+}
+
+.wavecontrols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Star Jedi Hollow';
+    color: rgb(152, 233, 172);
+    font-size: 0.9rem;
+}
+
+.wavecontrols label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.wavecontrols input[type="range"] {
+    accent-color: rgb(175, 155, 194);
+    width: 130px;
+    cursor: pointer;
+}
+
+.wavecontrols span {
+    font-size: 0.8rem;
+    color: beige;
+}
+
+.wavecontrols button {
+    font-family: 'Star Jedi Hollow';
+    background-color: transparent;
+    border: 2px dotted rgb(38, 255, 92);
+    color: rgb(152, 233, 172);
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+}
+
+.wavecontrols button:hover {
+    background-color: rgba(94, 255, 0, 0.15);
+}
+
+.waveeq {
+    font-family: 'Sterion';
+    color: beige;
+    font-size: 1.1rem;
+    border: 1px dashed palevioletred;
+    padding: 10px 24px;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.waveeq p {
+    margin: 0;
+    color: beige;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0;
 }

@@ -39,9 +39,6 @@
                 </div>
             </div>        
         </div>
-        <div class="circlecode">
-            <a href="circlecode/code.html" target="_blank">View Circle Code</a>
-        </div>
         <div class="the-details">
             <h1>Simple Harmonic Motion (SHM)</h1>
             <p>
@@ -53,17 +50,38 @@
                 Learn more about the physics of oscillation at 
                 <a href="https://byjus.com" target="_blank" style="color: yellow; text-decoration: underline;">BYJU'S SHM Guide</a>.
             </p>
-            <ul>
-                <li>SHM is easy ik</li>
-                <li>dont judge my choice by seeing this project</li>
-            </ul>
+        </div>
+        <div class="othertopics">
+            <h2>similar topics:</h2>
+        </div>
+        <div class="wave">
+            <h2>Wave Motion</h2>
+            <canvas id="wavecanvas" width="700" height="200"></canvas>
+            <div class="wavecontrols">
+                <label>Amplitude
+                    <input type="range" id="waveamplitude" min="10" max="100" value="50">
+                    <span id="ampval">50</span>
+                </label>
+                <label>Frequency
+                    <input type="range" id="wavefrequency" min="0.01" max="0.1" step="0.001" value="0.05">
+                    <span id="freqval">0.05</span>
+                </label>
+                <label>Wavelength
+                    <input type="range" id="wavelength" min="50" max="300" value="150">
+                    <span id="waveval">150</span>
+                </label>
+                <button id="direction">Direction: →</button>
+                <button id="pause">Pause</button>
+        </div>
+        <div class="waveeq">
+            <p id="waveequation">v = fλ = ? m/s</p>
         </div>
     </main>
 
     <footer>
         
     </footer>
-    
+    <script src="wave.js"></script>
     <script type="module" src="script.js"></script>
 </body>
 </html>

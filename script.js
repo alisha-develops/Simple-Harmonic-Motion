@@ -8,6 +8,7 @@ const greentored = document.getElementById('connectgrtord');
 const redtowhite = document.getElementById('connectrdtow')
 const tanvelocity = document.getElementById('tangentialv')
 
+
 function centerEl(el) {
     el.style.position = 'absolute';
     el.style.top = '50%';
