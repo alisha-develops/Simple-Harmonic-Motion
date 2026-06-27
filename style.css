@@ -251,59 +251,6 @@ img {
     transform: translateX(-50%);
 }
 
-#sun {
-    border: 2px solid rgb(134, 112, 49);
-    background-color: rgb(255, 234, 48);
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    position: relative;
-}
-
-#orbit1 {
-    border: 2px solid rgb(255, 255, 255);
-    background: transparent;
-    border-radius: 50%;
-    height: 90px;
-    width: 90px;
-    position: absolute;
-    transform: translate(-11%, -90%);
-    pointer-events: none;
-}
-#orbit2 {
-    border: 2px solid rgb(255, 255, 255);
-    background: transparent;
-    border-radius: 50%;
-    height: 120px;
-    width: 120px;
-    position: absolute;
-    transform: translate(-20%, -80%);
-    pointer-events: none;
-}
-#orbit {
-    border: 2px solid rgb(255, 255, 255);
-    background: transparent;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    transform: translate(-11%, -90%);
-    pointer-events: none;
-}
-#orbit {
-    border: 2px solid rgb(255, 255, 255);
-    background: transparent;
-    border-radius: 50%;
-    height: 80px;
-    width: 80px;
-    position: absolute;
-    transform: translate(-11%, -90%);
-    pointer-events: none;
-}
-
 @keyframes moveDot {
   from { transform: translateX(0); }
   to { transform: translateX(200px); }
