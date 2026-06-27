@@ -11,6 +11,18 @@ const state = {
 };
 
 const slider= document.getElementById("waveamplitude");
+const freq = document.getElementById("wavefrequency");
+const length = document.getElementById("wavelength");
+const amp = document.getElementById("ampval");
+const freq = document.getElementById("freqval");
+const wave= document.getElementById("waveval");
+const way = document.getElementById("direction");
+const stop = document.getElementById("pause");
+const equation = document.getElementById("waveequation");
+
+slider.addEventListener("input", function() {
+    state.frequency = Number(slider.value)
+})
 
 const radius = 125;
 let angle = 0;
