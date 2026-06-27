@@ -21,8 +21,10 @@ const stop = document.getElementById("pause");
 const equation = document.getElementById("waveequation");
 
 slider.addEventListener("input", function() {
-    state.frequency = Number(slider.value)
-})
+    state.frequency = Number(slider.value);
+    amp.textContent = slider.value;
+    showEquation();
+});
 
 const radius = 125;
 let angle = 0;

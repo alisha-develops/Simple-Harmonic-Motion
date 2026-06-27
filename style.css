@@ -261,6 +261,7 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    cursor: url('images/cursor.png'), auto;
 }
 
 .wave h2 {
@@ -288,6 +289,7 @@ img {
     font-family: 'Star Jedi Hollow';
     color: rgb(255, 238, 0);
     font-size: 0.9rem;
+    cursor: url('images/cursor.png'), auto;
 }
 
 .wavecontrols label {
@@ -295,12 +297,13 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 6px;
+    cursor: url('images/cursor.png'), auto;
 }
 
 .wavecontrols input[type="range"] {
     accent-color: rgb(255, 217, 0);
     width: 130px;
-    cursor: pointer;
+    cursor: url('images/cursor.png'), auto;
 }
 
 .wavecontrols span {
@@ -318,6 +321,7 @@ img {
     cursor: pointer;
     font-size: 0.85rem;
     transition: background-color 0.3s;
+    cursor: url('images/cursor.png'), auto;
 }
 
 .wavecontrols button:hover {
