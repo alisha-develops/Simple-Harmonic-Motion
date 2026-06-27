@@ -1,3 +1,17 @@
+const canvas = document.getElementById("wavecanvas");
+const content = canvas.getContext("2d");
+
+const state = {
+    amplitude:50,
+    frequency:0.05,
+    wavelength:150,
+    direction:1,
+    paused:false,
+    time:0
+};
+
+const slider= document.getElementById("waveamplitude");
+
 const radius = 125;
 let angle = 0;
 
@@ -59,3 +73,4 @@ function animate () {
     requestAnimationFrame(animate);
 }
 animate ();
+
