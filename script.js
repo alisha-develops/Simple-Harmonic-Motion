@@ -1,5 +1,5 @@
 const canvas = document.getElementById("wavecanvas");
-const content = canvas.getContext("2d");
+const contex = canvas.getContext("2d");
 
 const state = {
     amplitude:50,
@@ -43,14 +43,74 @@ wvlength.addEventListener("input", function(){
     showEquation();
 });
 
-direction.addEventListener("click", function(){
+way.addEventListener("click", function(){
     state.direction = state.direction * -1;
     if (state.direction === 1) {
-        direction.textContent = "direction: right";
+        way.textContent = "direction: right";
     } else (
-        direction.textContent = "direction: left";
+        way.textContent = "direction: left";
     )
 });
+
+stop.addEventListener("click", function(){ 
+    state.paused = !state.paused;
+    if (state.paused){
+        stop.textContent = "resume";
+    } else {
+        stop.textContent = "pause";
+    }
+})
+
+function showEquation () {
+    const v = (state.frequency * state.wavelength).toFixed(3);
+    waveeq.textContent= "v = f x wavelength = " + state.frequency + " x " + state.wavelength + " = " + v + " units per second";
+}
+
+function drawWave () {
+    const width = canvas.width;
+    const height = canvas.height;
+    const centerY = height / 2;
+    const k = (2 * Math.PI) / state.wavelength;
+    const omega = 2 * Math.PI * state.frequency;
+
+    contex.clearRect(0, 0, width, height);
+    contex.beginPath();
+    contex.strokeStyle = "rgba(255, 255, 255, 0.15)";
+    contex.lineWidth = 1;
+    contex.setLineDash([5, 5]);
+    contex.moveTo(0, centerY);
+    contex.lineTo(width, centerY);
+    contex.stroke();
+    contex.setLineDash([]);
+
+    let x = 0;
+    while(x <= width) {
+        const y = state.amplitude * Math.sin(k * x - state.direction * omega * state.time);
+        const screenY = centerY - y;
+
+        if (x===0) {
+            contex.moveTo(x, screenY);
+        } else {
+            contex.lineTo(x, screenY);
+        }
+        x = x + 1;
+    }
+    contex.stroke();
+
+    const dotX = 60;
+    const doty = centerY- state.amplitude * Math.sin(k * dotX - state.direction * omega * state.time);
+    ctx.beginPath();
+    contex.arc(dotX, dotY, 6, 0, Math.PI * 2);
+    contex.fillStyle = "green";
+    contex.fill();
+
+    contex.beginPath();
+    contex.strokeStyle = "brown";
+    contex.lineWidth = 2;
+    contex.moveTo(dotX, centerY);
+    contex.lineTo(dotX, dotY);
+    contex.stroke();
+}
 
 const radius = 125;
 let angle = 0;
