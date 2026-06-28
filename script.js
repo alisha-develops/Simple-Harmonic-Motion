@@ -26,13 +26,7 @@ slider.addEventListener("input", function() {
     showEquation();
 });
 
-freq.addEventListener("input", function() {
-    state.wavelength =Number(freq.value);
-    freq.textContent = freq.value;
-    state.wavelength = Number((1 / state.wavelength).toFixed(4));
-    freq.value = state.frequency;
-    showEquation();
-})
+freq.addEventListener("input", function() {})
 
 wvlength.addEventListener("input", function(){
     state.wavelength = Number(wvlength.value);
@@ -83,6 +77,10 @@ function drawWave () {
     contex.stroke();
     contex.setLineDash([]);
 
+    contex.beginPath();
+    contex.strokeStyle = "rgb(255, 217, 0)";
+    contex.lineWidth = 2.5;
+
     let x = 0;
     while(x <= width) {
         const y = state.amplitude * Math.sin(k * x - state.direction * omega * state.time);
@@ -111,6 +109,18 @@ function drawWave () {
     contex.lineTo(dotX, dotY);
     contex.stroke();
 }
+
+function animate () {
+    if (state.paused) {
+        return;
+    }
+    state.time = state.time +1;
+    drawWave();
+    requestAnimationFrame(animate);
+}
+
+showEquation();
+animate();
 
 const radius = 125;
 let angle = 0;
