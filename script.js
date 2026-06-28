@@ -21,19 +21,26 @@ const stop = document.getElementById("pause");
 const equation = document.getElementById("waveequation");
 
 slider.addEventListener("input", function() {
-    state.frequency = Number(slider.value);
+    state.amplitude = Number(slider.value);
     amp.textContent = slider.value;
     showEquation();
 });
 
-freq.addEventListener("input", function() {})
+freq.addEventListener("input", function() {
+    state.frequency = Number(freq.value);
+    freq2.textContent = freq.value;
+    state.wavelength = Math.round(1 / state.frequency);
+    wvlength.value = state.wavelength;
+    wave.textContent = state.wavelength;
+    showEquation();
+})
 
 wvlength.addEventListener("input", function(){
     state.wavelength = Number(wvlength.value);
     wave.textContent = wvlength.value;
     state.frequency = Number((1 / state.wavelength).toFixed(4));
     freq.value = state.frequency;
-    freq.textContent = state.frequency;
+    freq2.textContent = state.frequency;
     showEquation();
 });
 
@@ -41,9 +48,9 @@ way.addEventListener("click", function(){
     state.direction = state.direction * -1;
     if (state.direction === 1) {
         way.textContent = "direction: right";
-    } else (
+    } else {
         way.textContent = "direction: left";
-    )
+    }
 });
 
 stop.addEventListener("click", function(){ 
@@ -52,12 +59,13 @@ stop.addEventListener("click", function(){
         stop.textContent = "resume";
     } else {
         stop.textContent = "pause";
+        animateWave();
     }
-})
+});
 
 function showEquation () {
     const v = (state.frequency * state.wavelength).toFixed(3);
-    waveeq.textContent= "v = f x wavelength = " + state.frequency + " x " + state.wavelength + " = " + v + " units per second";
+    equation.textContent= "v = f x wavelength = " + state.frequency + " x " + state.wavelength + " = " + v + " units per second";
 }
 
 function drawWave () {
@@ -96,8 +104,8 @@ function drawWave () {
     contex.stroke();
 
     const dotX = 60;
-    const doty = centerY- state.amplitude * Math.sin(k * dotX - state.direction * omega * state.time);
-    ctx.beginPath();
+    const dotY = centerY- state.amplitude * Math.sin(k * dotX - state.direction * omega * state.time);
+    contex.beginPath();
     contex.arc(dotX, dotY, 6, 0, Math.PI * 2);
     contex.fillStyle = "green";
     contex.fill();
@@ -110,17 +118,14 @@ function drawWave () {
     contex.stroke();
 }
 
-function animate () {
+function animateWave () {
     if (state.paused) {
         return;
     }
     state.time = state.time +1;
     drawWave();
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateWave);
 }
-
-showEquation();
-animate();
 
 const radius = 125;
 let angle = 0;
@@ -142,7 +147,7 @@ function centerEl(el) {
 
 [particlegreen, particlewhite, greentowhite, greentored, redtowhite, tanvelocity].forEach(centerEl);
 
-function animate () {
+function animateSHM () {
     angle += 0.02;
 
     const gx = radius * Math.cos(angle);
@@ -180,7 +185,9 @@ function animate () {
     tanvelocity.style.transformOrigin = 'left center';
     tanvelocity.style.transform = `translate(${gx}px, ${gy}px) rotate(${tangAngle}rad)`;
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animateSHM);
 }
-animate ();
+showEquation();
+animateWave();
+animateSHM();
 

@@ -264,6 +264,16 @@ img {
     cursor: url('images/cursor.png'), auto;
 }
 
+.wave p {
+    font-family: 'Star Jedi Hollow';
+    color: rgb(255, 230, 0);
+    font-size:1.4rem;
+    margin: 8px 0;
+    text-align: left;
+    padding: 0;
+    line-height: 1.6;
+}
+
 .wave h2 {
     font-family: 'Sterion';
     color: rgb(255, 217, 0);
