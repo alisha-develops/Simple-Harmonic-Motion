@@ -57,26 +57,26 @@
         <div class="wave">
             <h2>Wave Motion</h2>
             <p>When every particle in a medium does SHM but with a slight delay from its neighbor, you get a wave travelling through space. The same amplitude and frequency from SHM directly control the wave.</p>
-            <p>Connection to SHM: y = A sin(kx - wt) is just SHM at every point x along the string.</p>
+            <p>Connection to SHM: <span class="eq">y = A sin(kx - wt)</span> is just SHM at every point x along the string.</p>
             <canvas id="wavecanvas" width="700" height="200"></canvas>
             <div class="wavecontrols">
                 <label>Amplitude
-                    <input type="range" id="waveamplitude" min="10" max="100" value="50">
+                    <input type="range" id="waveamplitude" min="10" max="100" value="50" class="slider">
                     <span id="ampval">50</span>
                 </label>
                 <label>Frequency
-                    <input type="range" id="wavefrequency" min="0.01" max="0.1" step="0.001" value="0.05">
+                    <input type="range" id="wavefrequency" min="0.01" max="0.1" step="0.001" value="0.05" class="slider">
                     <span id="freqval">0.05</span>
                 </label>
                 <label>Wavelength
-                    <input type="range" id="wavelength" min="50" max="300" value="150">
+                    <input type="range" id="wavelength" min="50" max="300" value="150" class="slider">
                     <span id="waveval">150</span>
                 </label>
                 <button id="direction">Direction: →</button>
                 <button id="pause">Pause</button>
         </div>
         <div class="waveeq">
-            <p id="waveequation">v = fλ = ? m/s</p>
+            <p id="waveequation" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" style="color: burlywood;"> = fλ = ? m/s</p>
         </div>
     </main>
 
