@@ -26,6 +26,14 @@ slider.addEventListener("input", function() {
     showEquation();
 });
 
+freq.addEventListener("input", function() {
+    state.wavelength =Number(freq.value);
+    freq.textContent = freq.value;
+    state.wavelength = Number((1 / state.wavelength).toFixed(4));
+    freq.value = state.frequency;
+    showEquation();
+})
+
 const radius = 125;
 let angle = 0;
 
