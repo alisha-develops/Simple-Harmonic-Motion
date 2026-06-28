@@ -12,9 +12,9 @@ const state = {
 
 const slider= document.getElementById("waveamplitude");
 const freq = document.getElementById("wavefrequency");
-const length = document.getElementById("wavelength");
+const wvlength = document.getElementById("wavelength");
 const amp = document.getElementById("ampval");
-const freq = document.getElementById("freqval");
+const freq2 = document.getElementById("freqval");
 const wave= document.getElementById("waveval");
 const way = document.getElementById("direction");
 const stop = document.getElementById("pause");
@@ -33,6 +33,24 @@ freq.addEventListener("input", function() {
     freq.value = state.frequency;
     showEquation();
 })
+
+wvlength.addEventListener("input", function(){
+    state.wavelength = Number(wvlength.value);
+    wave.textContent = wvlength.value;
+    state.frequency = Number((1 / state.wavelength).toFixed(4));
+    freq.value = state.frequency;
+    freq.textContent = state.frequency;
+    showEquation();
+});
+
+direction.addEventListener("click", function(){
+    state.direction = state.direction * -1;
+    if (state.direction === 1) {
+        direction.textContent = "direction: right";
+    } else (
+        direction.textContent = "direction: left";
+    )
+});
 
 const radius = 125;
 let angle = 0;
